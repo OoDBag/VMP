@@ -175,8 +175,13 @@
     <div class="hero-body has-text-centered">
       <img src="./static/images/teaser_8.png" alt="Teaser image" style="max-width: 100%; height: auto; border-radius: 12px;">
       <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint portraits.
+        (Right) Our VideoMindPalace represents video data as a layered, topological structured graph, where nodes capture spatial concepts 
+        (e.g., objects, activity zones, rooms), and edges signify spatiotemporal, layout relationships and human-object interaction. 
+        This graph can be represented in JSON format and used as input to text-only LLMs. (Center) VideoTree
+        extracts query-relevant information by organizing videos as tree structures, with deeper branches capturing finer, query-specific details. 
+        A captioner then generates video descriptions from this structure, enabling the LLM to perform reasoning over long videos. 
+        (Left) processes videos following temporal order, where visual captioners sequentially generate textual descriptions within each temporal sliding window, 
+        which the LLM then aggregates for reasoning.
       </h2>
     </div>
   </div>
