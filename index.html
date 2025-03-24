@@ -312,23 +312,6 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <figure class="has-text-centered">
-          <img src="./static/images/main_v5.png" alt="Method diagram" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-          <figcaption style="font-size: 0.9rem; margin-top: 0.5rem;">
-            Overview of our <strong>VideoMindPalace</strong> framework. It combines hand-object interaction, activity zone clustering, and spatial mapping to organize long-form videos into semantically rich graphs.
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <!--/ Method. -->
-  </div>
-</section>
 
 <section class="section" style="padding-top: 4rem; padding-bottom: 4rem;">
   <div class="container is-max-desktop">
@@ -341,8 +324,11 @@
                alt="Method diagram" 
                style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.15);">
           <figcaption style="font-size: 1.1rem; margin-top: 1rem; line-height: 1.6; max-width: 900px; margin-left: auto; margin-right: auto;">
-            <strong>Figure:</strong> An overview of the <strong>VideoMindPalace</strong> framework. It integrates hand-object interaction tracking, zone-based activity clustering, and spatial layout mapping 
-            to build a grounded semantic graph from long-form video. This structure enables effective spatial reasoning and language-based understanding for downstream tasks.
+            Overview of our VideoMindPalace framework. 1) VideoMindPalace is a three-layered graph with nodes representing spatial concepts (e.g., objects, zones, rooms) and edges capturing spatiotemporal relationships. 
+            Layer 1 - Human and Object: Nodes represent the human, and detected objects, with edges denoting spatiotemporal connections and interactions. 
+            Layer 2 - Activity Zones: Nodes represent specific activity zones with edges showing 3D spatial relationships. 
+            Layer 3 - Scene Layout: Nodes represent rooms with edges for relative distances. 2) This graph can be represented in the JSON format used as input to LLMs. 
+            The model’s responses are grounded in the physical scene, enabling it to identify locations, locate items of interest, and understand the topological structure of the space.
           </figcaption>
         </figure>
       </div>
